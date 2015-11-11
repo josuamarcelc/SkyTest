@@ -4,6 +4,13 @@
 	<title>index</title>
 </head>
 <body>
-
+{% for programme in programme_list %}
+<img src="{{programme['img']}}">
+<ul>
+	<li>{{programme['name']}}</li>
+	<li>{{programme['stars'] * "*"}}  </li>
+	<li><a href="/vote/{{ programme['id'] }}">Vote</a></li>
+</ul>
+{% endfor %}
 </body>
 </html>
