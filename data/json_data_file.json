@@ -1,1 +1,1 @@
-[{"stars": 2, "img": "../images/arrow.jpg", "name": "Arrow", "id": 0}, {"stars": 2, "img": "../images/youme.jpg", "name": "You, me and the Apocalypse", "id": 1}, {"stars": 2, "img": "../images/fargo.jpg", "name": "Fargo", "id": 2}]
+[{"img": "../images/arrow.jpg", "stars": 6, "name": "Arrow", "id": 0}, {"img": "../images/youme.jpg", "stars": 4, "name": "You, me and the Apocalypse", "id": 1}, {"img": "../images/fargo.jpg", "stars": 12, "name": "Fargo", "id": 2}]

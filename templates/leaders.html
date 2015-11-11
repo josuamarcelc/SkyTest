@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>index</title>
+	<title>Leaders</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 	<style type="text/css">
@@ -10,7 +10,8 @@
 </head>
 
 <body>
-	<!-- NavBar -->
+
+<!-- NavBar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 	    <div class="container-fluid">
@@ -25,27 +26,24 @@
 	    </div>
 	  </div>
 	</nav>
-
 	{% for programme in programme_list %}
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-  		<div class="col-sm-4 col-md-4">
-      	<img src="{{programme['img']}}" class="img-responsive">
-      </div>
-      		<div class="caption">
-		        <h3>{{programme['name']}}</h3>
-		        <p>{{programme['stars'] * "*"}}</p>
-		        <p><a href="/vote/{{ programme['id'] }}" class="btn btn-primary" role="button">Vote</a></p>
-      		</div>
-    	
-    </div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    
+			<div class="media">
+	  		<div class="media-left">
+		      <img class="media-object img-responsive" src="{{programme['img']}}" width="50">
+	  		</div>
+	  			<div class="media-body">
+	    			<h4 class="media-heading">{{programme['name']}}</h4>
+	    			{{programme['stars'] * "*"}}
+	  			</div>
+			</div>
+
+
+
   </div>
-  {% endfor %}
-
 </div>
-
+{% endfor %}
 </body>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-
 </html>
