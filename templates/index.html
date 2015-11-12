@@ -31,32 +31,36 @@
 	    </div>
 	  </div>
 	</nav>
-	<!-- Data entry here -->
-	<div class="container">
-	<div class="row">
-		{% for programme in programme_list %}
-			{% if loop.index0 is divisibleby 3 %}
-				</div>
-				<div class="row" name="test">
-			{% endif %}
-	  <div class="col-xs-4 col-sm-4 col-md-4">
-	    <div class="thumbnail">
-	  		<div class="col-sm-4 col-md-4">
-	      	<img src="{{programme['img']}}" class="img-responsive">
-	      </div>
-	      		<div class="caption">
-			        <h3>{{programme['name']}}</h3>
-			        {% for star in range(0, programme['stars']) %}
-			        		<i class='glyphicon glyphicon-star'></i>
-			        {% endfor %}
-			        <p><a href="/vote/{{ programme['id'] }}" class="btn btn-primary" role="button">Vote</a></p>
-	      		</div>
-	    	
-	    </div>
+		{% if message is defined %}
+ 			<div class="alert alert-danger" role="alert">{{ message }}</div>
+ 		{% endif %}
+		<!-- Data entry here -->
+		<div class="container">
+		<div class="row">
+			{% for programme in programme_list %}
+				{% if loop.index0 is divisibleby 3 %}
+					</div>
+					<div class="row" name="test">
+				{% endif %}
+		  <div class="col-xs-4 col-sm-4 col-md-4">
+		    <div class="thumbnail">
+		  		<div class="col-sm-4 col-md-4">
+		      	<img src="{{programme['img']}}" class="img-responsive">
+		      </div>
+		      		<div class="caption">
+				        <h3>{{programme['name']}}</h3>
+				        {% for star in range(0, programme['stars']) %}
+				        		<i class='glyphicon glyphicon-star'></i>
+				        {% endfor %}
+				        <p><a href="/vote/{{ programme['id'] }}" class="btn btn-primary" role="button">Vote</a></p>
+		      		</div>
+		    	
+		    </div>
+		  </div>
+	  	{% endfor %}
 	  </div>
-  	{% endfor %}
-  </div>
-  </div>
+	  </div>
+
 </body>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
