@@ -8,4 +8,13 @@
 </Programme 2> </programme>
 <movie id="3"> <Programme3>
 <name>Fargo</name> <image path>../images/fargo.jpg</image path></Programme3>
+
+<Programme id="4"> <Programme 4>
+<name>Arrow</name> <image path>../images/arrow.jpg</image path> 
+</programme 4> </programme>
+<Programme id="5"> <Programme 5>
+<name>You, me and the Apocalypse</name> <image path>../images/youme.jpg</image path>
+</Programme 5> </programme>
+<movie id="6"> <Programme6>
+<name>Fargo</name> <image path>../images/fargo.jpg</image path></Programme6>
 </programme data>

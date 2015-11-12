@@ -2,11 +2,52 @@
 <html>
 <head>
 	<title>upload</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+	<style type="text/css">
+		body { padding-top: 70px; } /*quick style fix for bootstrap nav bar*/
+	</style>
+
 </head>
 <body>
-<form action="" method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
+<!-- NavBar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+	    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	    <a class="navbar-brand" href="http://www.sky.com">
+        <img alt="Brand" src="../images/sky.png" class="img-responsive" width="50" >
+      </a>
+	      <a class="navbar-brand" href="/">Rate our content</a>
+	      <a class="navbar-brand" href="/upload">Upload</a>
+	      <a class="navbar-brand" href="/leaders">Leaderboard</a>
+	    </div>
+	  </div>
+	</nav>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<div class="panel panel-default">
+  <div class="panel-heading">Upload</div>
+  <div class="panel-body">
+   <form action="" method=post enctype=multipart/form-data>
+      		
+      	<input type=submit value=Upload>
+      	<input type=file name=file id="file">
+      		
+	</form>
+  </div>
+</div>
+
 </body>
 </html>

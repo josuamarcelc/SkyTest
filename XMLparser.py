@@ -2,8 +2,9 @@ import os
 import json
 from bs4 import BeautifulSoup
 
+
 def XML_parser(filename):
-	soup = BeautifulSoup(open('data/uploads/' + filename + ".xml"))
+	soup = BeautifulSoup(open('data/uploads/' + filename))
 	data_list = []
 
 	programmes = soup.find_all(attrs={'id': True})
