@@ -16,8 +16,12 @@ def allowed_file(filename):
 
 @app.route('/')
 def index():
-	programme_list = json_reader('json_data_file')
-	return render_template('index.html', programme_list=programme_list)
+	try:
+		programme_list = json_reader('json_data_file')
+		return render_template('index.html', programme_list=programme_list)
+	except FileNotFoundError:
+		return render_template('index.html')
+	
 
 
 @app.route('/upload', methods=['GET', 'POST'])
