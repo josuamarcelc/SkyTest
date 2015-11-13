@@ -6,6 +6,7 @@ Either unzip, or fork from GitHub.
 
 ## Usage
 Navigate to unzipped folder or forked repo and run `python run.py`
+Navigate in Firefox to http://127.0.0.1:5000/
 
 ## Future Work
  - Implement full database system
