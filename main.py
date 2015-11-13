@@ -33,6 +33,8 @@ def upload():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			XML_parser(filename)
 			flash('You successfully uploaded a file!')
+		else:
+			flash('You need a .xml file!')
 	return render_template('upload.html')
 
 
