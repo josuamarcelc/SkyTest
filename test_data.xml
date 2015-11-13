@@ -17,4 +17,15 @@
 </Programme 5> </programme>
 <movie id="6"> <Programme6>
 <name>Fargo</name> <image path>../images/fargo.jpg</image path></Programme6>
+
+
+<Programme id="7"> <Programme 7>
+<name>Arrow</name> <image path>../images/arrow.jpg</image path> 
+</programme 7> </programme>
+<Programme id="8"> <Programme 8>
+<name>You, me and the Apocalypse</name> <image path>../images/youme.jpg</image path>
+</Programme 8> </programme>
+<movie id="9"> <Programme9>
+<name>Fargo</name> <image path>../images/fargo.jpg</image path></Programme9>
+</programme data>
 </programme data>
